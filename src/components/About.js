@@ -1,14 +1,15 @@
-import React from 'react';
-import Links from './Links';
+import React from "react";
+import Link from "./Links";
 
-const About = ({ bio, links }) => {
- return (
-    <div>
+function About(props) {
+  return (
+    <div id="about">
       <h2>About Me</h2>
-      <p>{bio}</p>
-      <Links githubLink={links.githubLink} linkedinLink={links.linkedinLink} />
+      {props.bio && <p>{props.bio}</p>}
+      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
+      <Link github={props.github} linkedin={props.linkedin} />
     </div>
- );
-};
+  );
+}
 
 export default About;
